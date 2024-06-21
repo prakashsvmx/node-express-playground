@@ -39,6 +39,9 @@ Refresh Page and observe the CORS error
  Refresh Page and observe the success
 ```
 ### cURL
+
+In the case of S3, the respective headers are only added if the proper method is given, you can do so by using 
+
 ```
 #Successful scenario
 curl -H "Access-Control-Request-Method: GET" -H "Origin: http://example.com" -I http://localhost:22000/test-bucket/1.txt
