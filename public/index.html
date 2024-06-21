@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Express App</title>
+</head>
+
+<body>
+    <h1>Welcome to the Simple Express App!</h1>
+    <script>
+        async function makeRequestToMinIO() {
+            const response = await fetch("http://localhost:22000/test-bucket/1.txt");
+            const movies = await response.json();
+            console.log(movies);
+        }
+
+        makeRequestToMinIO()
+    </script>
+</body>
+
+</html>
