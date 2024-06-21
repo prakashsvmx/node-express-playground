@@ -38,3 +38,10 @@ Refresh Page and observe the CORS error
 
  Refresh Page and observe the success
 ```
+### cURL
+```
+#Successful scenario
+curl -H "Access-Control-Request-Method: GET" -H "Origin: http://example.com" -I http://localhost:22000/test-bucket/1.txt
+# Failure scenario with different origin
+curl -H "Access-Control-Request-Method: GET" -H "Origin: http://example1.com" -I http://localhost:22000/test-bucket/1.txt
+```
