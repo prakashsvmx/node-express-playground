@@ -1,12 +1,16 @@
 
 
-
-
+### WEB Application
+```
 npm install
 
 node src/app.js
 
 Server is running on http://localhost:25000
+```
+
+### MinIO Server
+```
 
 Experiment CORS with minio.
 
@@ -20,7 +24,10 @@ echo "1" > 1.txt
 mc cp 1.txt "local22/test-bucket/1.txt" 
 mc anonymous set public  local22/test-bucket
 
+```
+### Testing
 
+```
 > To Observe cors error 
 mc admin config set local22 api  cors_allow_origin="http://example.com"
 
@@ -30,3 +37,4 @@ Refresh Page and observe the CORS error
 2. mc admin config set local22 api  cors_allow_origin="*"
 
  Refresh Page and observe the success
+```
